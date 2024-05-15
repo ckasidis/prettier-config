@@ -1,0 +1,1 @@
+# @idkclass/prettier-config

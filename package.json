@@ -1,0 +1,52 @@
+{
+  "name": "@ckasidis/prettier-config",
+  "version": "0.0.0",
+  "private": true,
+  "description": "CK's Prettier Configuration",
+  "keywords": [
+    "prettier"
+  ],
+  "homepage": "https://github.com/ckasidis/prettier-config#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ckasidis/prettier-config.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "ckasidis",
+    "url": "https://github.com/ckasidis"
+  },
+  "main": "./index.cjs",
+  "scripts": {
+    "format:check": "prettier --check \"**/*.{html,css,scss,js,cjs,mjs,jsx,ts,tsx,md,markdown,mdx,json,yml,yaml,gql,graphql}\"",
+    "format:fix": "prettier --write \"**/*.{html,css,scss,js,cjs,mjs,jsx,ts,tsx,md,markdown,mdx,json,yml,yaml,gql,graphql}\""
+  },
+  "prettier": "./index.cjs",
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ]
+  },
+  "dependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
+    "prettier-plugin-packagejson": "^2.5.0",
+    "prettier-plugin-tailwindcss": "^0.5.14"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "prettier": "^3.0.3",
+    "semantic-release": "^22.0.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
